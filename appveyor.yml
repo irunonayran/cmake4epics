@@ -8,6 +8,8 @@ configuration: Release
 clone_folder: c:\projects\cmake4epics
 
 before_build:
+  - set EPICS_HOST_ARCH=win32-x86
+  - set EPICS_TARGET_ARCH=win32-x86
   - echo Running cmake...
   - cd c:\projects\cmake4epics
   - cmake --version
